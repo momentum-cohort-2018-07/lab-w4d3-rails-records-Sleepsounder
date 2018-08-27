@@ -1,0 +1,28 @@
+<h1>This is your view from views/albums/new.html.erb</h1>
+
+
+<%= form_with scope: :album, url: albums_path, local: true do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_area :title %>
+    </p>
+   
+    <p>
+      <%= form.label :artist %><br>
+      <%= form.text_area :artist_name %>
+    </p>
+   
+    <p>
+    <%= form.label :year_released %><br>
+    <%= form.text_field :year_released %>
+  </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+
+
+#   t.string "title"
+#     t.string "artist_name"
+#     t.integer "year_released"
